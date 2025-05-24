@@ -1,0 +1,305 @@
+/* Variáveis de cor e fonte */
+:root {
+    --verde-escuro: #2E7D32;
+    --verde-claro:  #66BB6A;
+    --branco:       #ffffff;
+    --cinza-texto:  #333333;
+    --font-principal: 'Poppins', sans-serif;
+  }
+  
+  /* Reset e estilo base . */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: var(--font-principal);
+    color: var(--cinza-texto);
+    background: var(--branco);
+    line-height: 1.6;
+  }
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* HEADER */
+  .site-header {
+    background: var(--verde-escuro);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    height: 50px;
+  }
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+  .nav-list li {
+    margin-left: 20px;
+  }
+  .nav-list a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .nav-list a:hover {
+    color: var(--verde-claro);
+  }
+  
+  /* HERO */
+  .hero {
+    background: var(--verde-claro);
+    color: var(--branco);
+    padding: 60px 0;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  /* SEÇÕES */
+  section {
+    padding: 40px 0;
+  }
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--verde-escuro);
+  }
+  
+  /* SERVIÇOS */
+/* —— Lista de serviços sem tabela —— */
+/* .lista-servicos li {
+    display: flex;
+    flex-direction: column;
+    background: #f9f9f9;
+    border: 1px solid var(--verde-claro);
+    border-radius: 8px;
+    padding: 16px;
+  } */
+
+  .lista-servicos li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* centraliza verticalmente */
+    align-items: center;       /* centraliza horizontalmente */
+    text-align: center;        /* centraliza o texto */
+    background: #f9f9f9;
+    border: 1px solid var(--verde-claro);
+    border-radius: 8px;
+    padding: 16px;
+    /* opcional: definir altura mínima para cards iguais */
+    min-height: 100px;
+  }
+
+  .lista-servicos {
+    list-style: none;
+    display: grid;
+    /* ajusta para caber de 2 a 4 colunas, dependendo do tamanho da tela */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .servico-titulo {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--cinza-texto);   /* antes era verde */
+  }
+  
+  /* Subtítulo do serviço (detalhes): itálico, cor padrão */
+  .servico-subtitulo {
+    font-style: italic;
+    font-size: 0.875rem;
+    color: var(--cinza-texto);
+    margin-top: 6px;
+  }
+  
+  /* Posicione a nota (sob consulta) ocupando toda a largura do grid */
+  .nota {
+    grid-column: 1 / -1;
+    font-style: italic;
+    color: var(--cinza-texto);
+  }
+  
+  /* —— Mapa responsivo —— */
+  .mapa {
+    margin-top: 20px;
+  }
+  .mapa iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 6px;
+  }
+  
+  /* Offset para âncoras */
+/* Para que o título fique sempre visível abaixo do header fixo */
+section {
+    /* ajuste esse valor se seu header tiver outra altura */
+    scroll-margin-top: 30px;
+  }
+  
+  /* GALERIA */
+/* Ajuste da Galeria para imagens proporcionais */
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .grid-galeria img {
+    width: 100%;
+    height: auto;            /* Altura automática, imagem inteira */
+    max-height: 240px;       /* Limita altura para ficar uniforme */
+    display: block;
+    border-radius: 8px;
+    background: #f9f9f9;     /* Se sobrar espaço, fica com fundo suave */
+  }
+
+  /* style.css */
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;       /* para quebrar linha quando não couber */
+    gap: 24px;             /* espaçamento entre os posts */
+    justify-content: center; /* opcional: centraliza tudo */
+    margin-top: 32px;
+  }
+  
+  .galeria .instagram-media {
+    flex: 1 1 45%;        /* flex-grow:1; flex-shrink:1; flex-basis:45% */
+    max-width: 540px;     /* como o embed sugere width ≤ 540px */
+    min-width: 320px;     /* igual ao min-width dele */
+    box-sizing: border-box;
+  }
+  
+  .instagram-embeds blockquote.instagram-media {
+    /* Remove o width inline que o Instagram injeta */
+    width: auto !important;
+  
+    /* Define que cada bloco quer, no mínimo, 300px e pode crescer se houver espaço */
+    flex: 1 1 300px;
+    max-width: 540px; /* igual ao próprio embed sugere */
+    margin: 0;        /* elimina margem extra */
+  }
+  
+  /* Container para alinhar embeds em linha */
+.instagram-embeds {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Cada post ocupa pelo menos 300px e no máximo 540px */
+  .instagram-embeds blockquote.instagram-media {
+    flex: 1 1 300px;
+    max-width: 540px;
+    margin: 0; /* remove margens extras*/
+  }
+
+  /* Texto introdutório na Galeria */
+.galeria-intro {
+    text-align: center;
+    font-size: 1rem;
+    margin: 16px 0;
+    color: var(--cinza-texto);
+  }
+  .galeria-intro a {
+    color: var(--verde-escuro);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .galeria-intro a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* CONTATO */
+  .contato-info p a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .mapa {
+    margin: 20px 0;
+  }
+  .redes {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .redes a {
+    color: var(--verde-escuro);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .redes span {
+    margin: 0 10px;
+    color: var(--cinza-texto);
+  }
+
+/* Links sociais com ícones */
+section#contato p a.social {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 12px;
+  }
+  section#contato p a.social svg {
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+  section#contato p a.social span {
+    font-weight: 600;
+    color: var(--cinza-texto);
+  }
+  section#contato p a.social.whatsapp span {
+    color: var(--verde-escuro);
+  }
+  section#contato p a.social.whatsapp svg path {
+    fill: var(--verde-escuro);
+  }
+  
+
+  /* Estilo para o link do WhatsApp */
+.whatsapp {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--verde-escuro);
+    font-weight: 600;
+  }
+  .whatsapp svg {
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+  .whatsapp:hover span {
+    text-decoration: underline;
+  }
+  
+  
+  /* FOOTER */
+  .site-footer {
+    background: #f1f1f1;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
