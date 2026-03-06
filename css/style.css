@@ -381,16 +381,44 @@ h2 {
 
 .service-group summary {
   align-items: center;
+  background: linear-gradient(180deg, #f7fbf8 0%, #edf7f0 100%);
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: minmax(0, 1fr) 120px auto;
   list-style: none;
-  min-height: 58px;
-  padding: 0.95rem 1rem;
+  min-height: 64px;
+  padding: 0.95rem 1rem 0.95rem 1.1rem;
+  position: relative;
+  transition: background-color 0.2s ease;
 }
 
 .service-group summary::-webkit-details-marker {
   display: none;
+}
+
+.service-group summary::after {
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--brand-700);
+  content: "+";
+  display: inline-flex;
+  font-size: 1.05rem;
+  font-weight: 800;
+  height: 30px;
+  justify-content: center;
+  margin-left: 0.8rem;
+  min-width: 30px;
+}
+
+.service-group[open] summary::after {
+  content: "-";
+}
+
+.service-group summary:hover {
+  background: linear-gradient(180deg, #f2f9f4 0%, #e8f4ed 100%);
 }
 
 .service-group h3 {
@@ -402,6 +430,9 @@ h2 {
   color: var(--text-soft);
   font-size: 0.82rem;
   font-weight: 700;
+  justify-self: start;
+  text-align: left;
+  width: 120px;
 }
 
 .service-chips {
@@ -470,6 +501,65 @@ h2 {
 }
 
 .instagram-cta {
+  margin-top: 1rem;
+}
+
+.reviews-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 1rem;
+}
+
+.review-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.review-head {
+  align-items: center;
+  display: flex;
+  gap: 0.7rem;
+}
+
+.review-head img {
+  border: 2px solid #eef7f2;
+  border-radius: 50%;
+  height: 56px;
+  object-fit: cover;
+  width: 56px;
+}
+
+.review-head h3 {
+  color: var(--brand-800);
+  font-size: 1.02rem;
+}
+
+.review-stars {
+  color: #f4b426;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  margin-top: 0.7rem;
+}
+
+.review-meta {
+  color: var(--text-soft);
+  font-size: 0.86rem;
+  margin-top: 0.2rem;
+}
+
+.review-text {
+  color: var(--text-soft);
+  font-size: 0.93rem;
+  margin-top: 0.55rem;
+}
+
+.reviews-cta {
   margin-top: 1rem;
 }
 
@@ -608,6 +698,14 @@ h2 {
 
   .btn-sm {
     width: 100%;
+  }
+
+  .service-group summary {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+  }
+
+  .service-group summary span {
+    width: auto;
   }
 }
 
