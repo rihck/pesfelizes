@@ -18,16 +18,26 @@
     <div class="container nav-wrap">
       <a class="brand" href="#home" aria-label="Página inicial Pés Felizes">
         <img src="images/logo.png" alt="Logo Pés Felizes" class="logo" />
-        <span class="brand-text">Clínica Pés Felizes</span>
+        <div>
+          <strong class="brand-text">Clínica Pés Felizes</strong>
+          <span class="brand-sub">Dra. Mônica Francine</span>
+        </div>
       </a>
-      <nav aria-label="Navegação principal">
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
         <ul class="nav-list">
           <li><a href="#home">Início</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#instagram">Instagram</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
+        <a class="btn btn-primary btn-sm" href="https://wa.me/5513996887624" target="_blank" rel="noopener noreferrer">Agendar</a>
       </nav>
     </div>
   </header>
@@ -37,23 +47,33 @@
       <div class="container hero-grid">
         <div>
           <p class="eyebrow">Podologia Clínica em Santos - SP</p>
-          <h1>Cuidado profissional para a saúde e o conforto dos seus pés</h1>
+          <h1>Saúde dos pés com técnica, atenção e resultado real</h1>
           <p class="hero-text">
-            Atendimento humanizado, técnicas atualizadas e foco em prevenção, tratamento e bem-estar em todas as fases da vida.
+            Atendimento profissional para prevenção, tratamento e bem-estar, com foco em conforto, segurança e acompanhamento personalizado.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://wa.me/5513996887624" target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp</a>
-            <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
+            <a class="btn btn-primary" href="https://wa.me/5513996887624" target="_blank" rel="noopener noreferrer">Agendar no WhatsApp</a>
+            <a class="btn btn-ghost" href="#servicos">Conhecer serviços</a>
           </div>
-          <ul class="hero-points" aria-label="Diferenciais da clínica">
-            <li>Mais de 10 anos de experiência</li>
-            <li>Especialização em pé diabético</li>
-            <li>Atendimento acolhedor e profissional</li>
-          </ul>
+
+          <div class="trust-strip" aria-label="Diferenciais da clínica">
+            <article>
+              <strong>+10 anos</strong>
+              <span>de experiência</span>
+            </article>
+            <article>
+              <strong>Pé diabético</strong>
+              <span>especialização</span>
+            </article>
+            <article>
+              <strong>Atendimento</strong>
+              <span>acolhedor e ético</span>
+            </article>
+          </div>
         </div>
 
         <aside class="hero-card" aria-label="Imagem da clínica">
-          <img src="images/clinic_interior.png" alt="Ambiente da Clínica Pés Felizes" />
+          <img src="images/clinic_interior.png" alt="Ambiente da Clínica Pés Felizes" loading="lazy" />
           <div class="hero-card-caption">
             <strong>Dra. Mônica Francine</strong>
             <span>Bacharel em Podologia</span>
@@ -66,16 +86,16 @@
       <div class="container split-card">
         <div>
           <p class="section-kicker">Sobre a profissional</p>
-          <h2>Dra. Mônica Francine</h2>
+          <h2>Podologia com abordagem humana e clínica</h2>
           <p>
-            A Dra. Mônica é especialista em podologia clínica, com mais de 10 anos de experiência. Ela dedica seu trabalho ao cuidado e bem-estar dos pés, oferecendo um atendimento acolhedor, ético e personalizado para cada paciente.
+            A Dra. Mônica é especialista em podologia clínica, com mais de 10 anos de experiência. Seu trabalho é direcionado ao cuidado integral dos pés, com avaliação individual, técnica adequada e comunicação clara com cada paciente.
           </p>
           <p>
             Formação: <strong>Bacharel em Podologia</strong>, com especialização em <strong>Pé Diabético</strong>.
           </p>
         </div>
         <div class="about-image-wrap">
-          <img src="images/foot_treatment2.png" alt="Atendimento de podologia em andamento" />
+          <img src="images/foot_treatment2.png" alt="Atendimento de podologia em andamento" loading="lazy" />
         </div>
       </div>
     </section>
@@ -83,31 +103,68 @@
     <section id="servicos" class="section reveal">
       <div class="container">
         <p class="section-kicker">Serviços</p>
-        <h2>Tratamentos e cuidados especializados</h2>
-        <ul class="services-grid">
-          <li><span class="servico-titulo">Podologia Preventiva</span></li>
-          <li><span class="servico-titulo">Tratamento de Calos e Calosidades</span></li>
-          <li><span class="servico-titulo">Calcanhar (fissura)</span></li>
-          <li><span class="servico-titulo">Unha encravada</span><span class="servico-subtitulo">com inflamação</span></li>
-          <li><span class="servico-titulo">Unha encravada</span><span class="servico-subtitulo">sem inflamação</span></li>
-          <li><span class="servico-titulo">Curativo Simples</span></li>
-          <li><span class="servico-titulo">Órtese (correção de unha)</span><span class="servico-subtitulo">colocação</span></li>
-          <li><span class="servico-titulo">Órtese (correção de unha)</span><span class="servico-subtitulo">manutenção</span></li>
-          <li><span class="servico-titulo">Órtese (correção de unha)</span><span class="servico-subtitulo">manutenção</span></li>
-          <li><span class="servico-titulo">Hidratação</span><span class="servico-subtitulo">com creme ativador de corrente sanguínea</span></li>
-          <li><span class="servico-titulo">Quirodatilogia</span><span class="servico-subtitulo">tratamento para as mãos</span></li>
-          <li><span class="servico-titulo">Podopediatria</span></li>
-          <li><span class="servico-titulo">Podogeriatria</span></li>
-          <li><span class="servico-titulo">Tratamento de Verruga (olho-de-peixe)</span><span class="servico-subtitulo">laser - 6 sessões</span></li>
-          <li><span class="servico-titulo">Tratamento Onicomicólide</span><span class="servico-subtitulo">laser - 8 sessões</span></li>
-          <li><span class="servico-titulo">Tratamento para cicatrização</span></li>
-          <li><span class="servico-titulo">Aplicação Simultânea Laser ILIB</span></li>
-          <li><span class="servico-titulo">Pacote ILIB 1 Hora</span><span class="servico-subtitulo">5 sessões</span></li>
-          <li><span class="servico-titulo">Pacote ILIB 30 Hora</span><span class="servico-subtitulo">10 sessões</span></li>
-          <li><span class="servico-titulo">Curativo com Laserterapia</span></li>
-          <li><span class="servico-titulo">Aplicação de Bandagem Neuromuscular</span></li>
-          <li><span class="servico-titulo">Reflexologia podal + massagem de pernas</span></li>
-        </ul>
+        <h2>Tratamentos organizados por necessidade</h2>
+        <p class="section-intro">Uma estrutura mais clara para ajudar o paciente a identificar rapidamente o tipo de cuidado que procura.</p>
+
+        <div class="service-groups" role="list">
+          <details class="service-group" open>
+            <summary>
+              <h3>Prevenção e cuidado contínuo</h3>
+              <span>4 serviços</span>
+            </summary>
+            <ul class="service-chips">
+              <li>Podologia Preventiva</li>
+              <li>Hidratação com creme ativador de corrente sanguínea</li>
+              <li>Podopediatria</li>
+              <li>Podogeriatria</li>
+            </ul>
+          </details>
+
+          <details class="service-group">
+            <summary>
+              <h3>Unhas, calos e fissuras</h3>
+              <span>9 serviços</span>
+            </summary>
+            <ul class="service-chips">
+              <li>Tratamento de Calos e Calosidades</li>
+              <li>Calcanhar (fissura)</li>
+              <li>Unha encravada com inflamação</li>
+              <li>Unha encravada sem inflamação</li>
+              <li>Órtese (correção de unha) - colocação</li>
+              <li>Órtese (correção de unha) - manutenção</li>
+              <li>Curativo simples</li>
+              <li>Tratamento para cicatrização</li>
+              <li>Aplicação de Bandagem Neuromuscular</li>
+            </ul>
+          </details>
+
+          <details class="service-group">
+            <summary>
+              <h3>Laser e protocolos terapêuticos</h3>
+              <span>6 serviços</span>
+            </summary>
+            <ul class="service-chips">
+              <li>Tratamento de Verruga (olho-de-peixe) - laser (6 sessões)</li>
+              <li>Tratamento Onicomicólide - laser (8 sessões)</li>
+              <li>Aplicação Simultânea Laser ILIB</li>
+              <li>Pacote ILIB 1 Hora (5 sessões)</li>
+              <li>Pacote ILIB 30 Hora (10 sessões)</li>
+              <li>Curativo com Laserterapia</li>
+            </ul>
+          </details>
+
+          <details class="service-group">
+            <summary>
+              <h3>Bem-estar complementar</h3>
+              <span>2 serviços</span>
+            </summary>
+            <ul class="service-chips">
+              <li>Quirodatilogia (tratamento para as mãos)</li>
+              <li>Reflexologia podal + massagem de pernas</li>
+            </ul>
+          </details>
+        </div>
+
         <p class="note">* Valores e protocolos sob consulta.</p>
       </div>
     </section>
@@ -115,31 +172,42 @@
     <section id="galeria" class="section reveal">
       <div class="container">
         <p class="section-kicker">Resultados e ambiente</p>
-        <h2>Galeria</h2>
+        <h2>Galeria da clínica</h2>
         <div class="gallery-grid">
           <figure class="gallery-card">
-            <img src="images/foots_before_after2.png" alt="Antes e depois de tratamento podológico" />
+            <img src="images/foots_before_after2.png" alt="Antes e depois de tratamento podológico" loading="lazy" />
           </figure>
           <figure class="gallery-card">
-            <img src="images/foots_before_after.png" alt="Resultado de atendimento podológico" />
+            <img src="images/foots_before_after.png" alt="Resultado de atendimento podológico" loading="lazy" />
           </figure>
           <figure class="gallery-card">
-            <img src="images/foot_treatment.png" alt="Procedimento de tratamento dos pés" />
+            <img src="images/foot_treatment.png" alt="Procedimento de tratamento dos pés" loading="lazy" />
           </figure>
           <figure class="gallery-card">
-            <img src="images/clinic_interior.png" alt="Ambiente interno da clínica" />
+            <img src="images/clinic_interior.png" alt="Ambiente interno da clínica" loading="lazy" />
           </figure>
         </div>
+      </div>
+    </section>
 
-        <div class="instagram-panel">
-          <p>
-            Acompanhe mais casos e conteúdos no Instagram:
-            <a href="https://instagram.com/pes_felizes" target="_blank" rel="noopener noreferrer">@pes_felizes</a>
-          </p>
-          <div class="post-links">
-            <a href="https://www.instagram.com/p/CdipY-CORcu/" target="_blank" rel="noopener noreferrer">Post de resultado 1</a>
-            <a href="https://www.instagram.com/p/CcqPBitup5b/" target="_blank" rel="noopener noreferrer">Post de resultado 2</a>
-          </div>
+    <section id="instagram" class="section reveal">
+      <div class="container">
+        <p class="section-kicker">Social proof</p>
+        <h2>Instagram da clínica</h2>
+        <p class="section-intro">Publicações reais com resultados, rotina de atendimento e dicas de cuidados.</p>
+
+        <div class="instagram-feed">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CdipY-CORcu/" data-instgrm-version="14">
+            <a href="https://www.instagram.com/p/CdipY-CORcu/" target="_blank" rel="noopener noreferrer">Ver publicação no Instagram</a>
+          </blockquote>
+
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CcqPBitup5b/" data-instgrm-version="14">
+            <a href="https://www.instagram.com/p/CcqPBitup5b/" target="_blank" rel="noopener noreferrer">Ver publicação no Instagram</a>
+          </blockquote>
+        </div>
+
+        <div class="instagram-cta">
+          <a class="btn btn-ghost" href="https://instagram.com/pes_felizes" target="_blank" rel="noopener noreferrer">Seguir @pes_felizes</a>
         </div>
       </div>
     </section>
@@ -155,24 +223,16 @@
             <p>Bacharel em Podologia e Especializada em Pé Diabético</p>
             <ul>
               <li>
-                <a href="https://wa.me/5513996887624" target="_blank" rel="noopener noreferrer">
-                  WhatsApp: (13) 99688-7624
-                </a>
+                <a href="https://wa.me/5513996887624" target="_blank" rel="noopener noreferrer">WhatsApp: (13) 99688-7624</a>
               </li>
               <li>
-                <a href="https://instagram.com/pes_felizes" target="_blank" rel="noopener noreferrer">
-                  Instagram: @pes_felizes
-                </a>
+                <a href="https://instagram.com/pes_felizes" target="_blank" rel="noopener noreferrer">Instagram: @pes_felizes</a>
               </li>
               <li>
-                <a href="https://www.pesfelizes.com.br" target="_blank" rel="noopener noreferrer">
-                  Site: www.pesfelizes.com.br
-                </a>
+                <a href="https://www.pesfelizes.com.br" target="_blank" rel="noopener noreferrer">Site: www.pesfelizes.com.br</a>
               </li>
               <li>
-                <a href="https://www.google.com/maps/search/?api=1&query=R.+Maranh%C3%A3o%2C+86%2C+Jos%C3%A9+Menino%2C+Santos%2C+SP%2C+11065-410" target="_blank" rel="noopener noreferrer">
-                  Endereço: R. Maranhão, 86 - José Menino, Santos - SP
-                </a>
+                <a href="https://www.google.com/maps/search/?api=1&query=R.+Maranh%C3%A3o%2C+86%2C+Jos%C3%A9+Menino%2C+Santos%2C+SP%2C+11065-410" target="_blank" rel="noopener noreferrer">Endereço: R. Maranhão, 86 - José Menino, Santos - SP</a>
               </li>
             </ul>
           </div>
@@ -190,14 +250,34 @@
     </section>
   </main>
 
+  <a class="floating-wa" href="https://wa.me/5513996887624" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">WhatsApp</a>
+
   <footer class="site-footer">
     <div class="container footer-wrap">
       <p>© <span id="year">2026</span> Clínica Pés Felizes - Dra. Mônica Francine</p>
     </div>
   </footer>
 
+  <script async src="https://www.instagram.com/embed.js"></script>
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = mainNav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      mainNav.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener('click', () => {
+          mainNav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
