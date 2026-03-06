@@ -105,6 +105,11 @@
         <p class="section-kicker">Serviços</p>
         <h2>Tratamentos organizados por necessidade</h2>
         <p class="section-intro">Uma estrutura mais clara para ajudar o paciente a identificar rapidamente o tipo de cuidado que procura.</p>
+        <div class="services-actions">
+          <button id="toggle-all-services" class="btn btn-ghost btn-sm services-toggle-all" type="button" aria-expanded="false">
+            Expandir todos
+          </button>
+        </div>
 
         <div class="service-groups" role="list">
           <details class="service-group">
@@ -120,7 +125,7 @@
             </ul>
           </details>
 
-          <details class="service-group">
+          <details class="service-group" open>
             <summary>
               <h3>Tratamentos clínicos dos pés</h3>
               <span>6 serviços</span>
@@ -356,6 +361,31 @@
           menuToggle.setAttribute('aria-expanded', 'false');
         });
       });
+    }
+
+    const toggleAllButton = document.getElementById('toggle-all-services');
+    const serviceGroups = document.querySelectorAll('.service-group');
+
+    if (toggleAllButton && serviceGroups.length) {
+      const updateToggleAllLabel = () => {
+        const allOpen = Array.from(serviceGroups).every((group) => group.open);
+        toggleAllButton.textContent = allOpen ? 'Recolher todos' : 'Expandir todos';
+        toggleAllButton.setAttribute('aria-expanded', String(allOpen));
+      };
+
+      toggleAllButton.addEventListener('click', () => {
+        const allOpen = Array.from(serviceGroups).every((group) => group.open);
+        serviceGroups.forEach((group) => {
+          group.open = !allOpen;
+        });
+        updateToggleAllLabel();
+      });
+
+      serviceGroups.forEach((group) => {
+        group.addEventListener('toggle', updateToggleAllLabel);
+      });
+
+      updateToggleAllLabel();
     }
 
     document.getElementById('year').textContent = new Date().getFullYear();

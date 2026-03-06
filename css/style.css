@@ -339,6 +339,14 @@ h2 {
   max-width: 64ch;
 }
 
+.services-actions {
+  margin-top: 0.9rem;
+}
+
+.services-toggle-all {
+  min-width: 150px;
+}
+
 .split-card {
   background: linear-gradient(180deg, #ffffff 0%, #f4faf6 100%);
   border: 1px solid var(--line);
